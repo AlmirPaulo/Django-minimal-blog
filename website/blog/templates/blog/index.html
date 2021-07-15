@@ -1,0 +1,12 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+  {% for post in posts %}
+    <div class="container">
+      <h2>{{ post.title }}</h2>
+      <p class="text-muted">Posted at {{ post.date_added }}</p>
+    </div>
+  {% endfor %}
+ 
+{% endblock %}

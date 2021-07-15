@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static 'bootstrap-5.0.2-dist/css/bootstrap.css' %}">
+  <link rel="stylesheet" href="{% static 'bootstrap-5.0.2-dist/css/bootstrap.css.map' %}">
+  <title>Minimal Blog</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm bg-dark">
+    <a class="navbar-brand" href="">Minimal Blog</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" href="">About</a></li>
+      </ul>
+      <form class="form-inline">
+        <div class="row">
+          <div class="col">
+        <input class="form-control" type="search" placeholder="Blog posts">
+          </div>
+          <div class="col">
+        <button class="btn btn-primary btn-sm">Search</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </nav>
+    <section>
+      <div class="container mt-2">
+        {% block content %} {% endblock %}
+      </div>
+    </section>
+    <footer class='mt-5'>
+      <center>
+        <p class="text-muted">
+          This is a project by <a href="https://github.com/AlmirPaulo/">Almir Paulo</a>
+        </p>
+      </center>
+    </footer>
+</body>
+</html>
