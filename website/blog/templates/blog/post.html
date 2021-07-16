@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+
+
+{% block content %}
+
+ <h1>{{ post.title }}</h1>
+
+ <small class="text-muted">Posted at {{ post.date_added}}</small>
+
+ <h2>{{ post.intro }}</h2>
+
+ <p>{{ post.body }}</p>
+
+{% endblock %}

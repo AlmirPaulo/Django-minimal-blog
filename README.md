@@ -3,7 +3,7 @@
 
 A Blog Sample bult in Python/Django. Feel free to use this project to study or to use as your blog backend. 
 
-## Features
+<!--## Features
 
 * Posts
 * Tags

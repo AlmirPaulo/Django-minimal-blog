@@ -20,4 +20,6 @@ from blog import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name="home" ),
+    #O primeiro 'slug' será digitado na url e o segundo é o slug propriamente.
+    path('<slug:slug>/', views.post, name='post'),
 ]
