@@ -11,4 +11,33 @@
 
  <p>{{ post.body }}</p>
 
-{% endblock %}
+ <hr>
+<h2>Comments:</h2>
+{% for comment in post.comments.all %}
+  {% if comment %}
+<strong>{{ comment.name }}</strong>
+<p class="text-muted">{{ comment.date_added}}</p>
+<p>{{ comment.body }}</p>
+  {% else %}
+
+<p>No comments yet!</p>
+
+  {% endif %}
+{% endfor %}
+ <hr>
+
+ <h2>Add Comment:</h2>
+ <form action="{{ . }}" method="POST">
+ <!-- Built in security -->
+ {% csrf_token %}
+
+ <!-- Form as paragraph -->
+ {{ form.as_p }}
+
+    <button class="btn btn-primary">Submit</button>
+ </form>
+
+
+
+
+ {% endblock %}
